@@ -1,0 +1,20 @@
+.categories{
+    color: red;
+    background-color: honeydew;
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 15px;
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.categories :hover{
+  color: forestgreen;
+  font-size: 25px;
+}

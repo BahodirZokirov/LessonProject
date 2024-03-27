@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!-- block head -->
+{% block head %}
+
+{% endblock head %}
+
+
+
+{% block content %}
+adsfasdfad
+    <h2>
+        News pk: {{ certain_new.pk }}
+    </h2>
+    <h3>
+        News category: {{ certain_new.news_category }}
+    </h3>
+    <h2>
+        TOPIC: {{ certain_new.news_title }}
+    </h2>
+    <h3>
+        {{ certain_new.at_date }}
+    </h3>
+    {{ certain_new.news_body }}
+    <img src="{{ certain_new.news_image }}" alt="Image" width="200" height="200">
+
+
+    <a href="{% url 'news_edit' certain_new.pk %}">
+        <h2>
+            Edit News
+        </h2>
+    </a>
+
+    <a href="{% url 'news_delete' certain_new.pk %}">
+        <h2>
+            Delete News
+        </h2>
+    </a>
+
+
+
+
+{% endblock content %}

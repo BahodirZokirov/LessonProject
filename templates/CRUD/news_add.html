@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+        <form action="" method="post">{% csrf_token %}
+            <label for="title">News Title</label><br>
+            <input type="text" name="title" id="title"><br><br>
+
+            <label for="body">News Body</label><br>
+            <textarea name="body" id="body" cols="50" rows="8"></textarea><br><br>
+
+            <label for="image">News Image</label><br>
+            <input type="file" name="image" id="image"><br><br>
+
+            <label for="category">News Category</label>
+            <select name="category" id="category">
+                {% for category in categories %}
+                    <option value="{{ category.pk }}">{{ category.name }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <input type="submit" value="Save options">
+        </form>
+    {% endblock content %}

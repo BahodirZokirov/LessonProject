@@ -1,0 +1,39 @@
+.salom{
+    float: left;
+    display: inline;
+    border-radius: 60px;
+    width: 50px;
+    height:50px;
+}
+
+
+.homePage{
+    display: inline-block;
+    margin-top: 25px;
+    display: inline;
+    font-size: 40px;
+    margin-left: 10px;
+    color: blue;
+}
+
+.basehtml{
+    display: inline-block;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 10px;
+    border: 3px #777 solid;
+    border-radius: 15px;
+    background-color: bisque;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width:500px;
+}
+
+h1{
+    color:green;
+}

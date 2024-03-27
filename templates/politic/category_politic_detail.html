@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!-- block head -->
+{% block head %}
+
+{% endblock head %}
+
+
+<!-- block header -->
+{% block header %}
+
+{% endblock header %}
+
+
+<!-- block content -->
+{% block content %}
+    <h2>
+        TOPIC: {{ certain_new.news_title }}
+    </h2>
+    <h3>
+        {{ certain_new.at_date }}
+    </h3>
+    {{ certain_new.news_body }}
+{% endblock content %}
+
+
+<!-- block footer -->
+{% block footer %}
+
+{% endblock footer %}

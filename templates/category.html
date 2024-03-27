@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Category page</title>
+{% endblock head %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/category.css' %}">
+{% endblock header %}
+
+
+{% block content %}
+    <ul>
+        {% for category in categories %}
+            <li class="categories">
+                <a  {% if category.pk == 1 %}
+                    href = "{% url 'category_sport' %}"
+                    {% elif category.pk == 2 %}
+                    href = "{% url 'category_politic' %}"
+                    {% elif category.pk == 3 %}
+                    href = "{% url 'category_business' %}"
+                    {% elif category.pk == 4 %}
+                    href = "{% url 'categories_all' %}"
+                    {% else %}
+                    href = "{% url 'news_add' %}"
+                    {% endif %}>
+                    <h2>
+                        {{ category.name }}
+                    </h2>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

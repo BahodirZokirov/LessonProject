@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add category</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+        <form action="" method="post">{% csrf_token %}
+            <label for="title">News Title</label><br>
+            <input type="text" name="title" id="title" value="{{ news.news_title }}"><br><br>
+
+            <label for="body">News Body</label><br>
+            <textarea name="body" id="body" cols="50" rows="8">{{ news.news_body }}</textarea><br><br>
+
+            <label for="image">News Image</label><br>
+            <input type="file" name="image" id="image"><br><br>
+
+            <label for="category">News Category</label>
+            <select name="category" id="category" selected="True">
+                {% for category in categories %}
+                    <option value="{{ category.pk }}">{{ category.name }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <input type="submit" value="Save options">
+        </form>
+</body>
+</html>

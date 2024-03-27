@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+    </script>
+
+    {% block header %}
+
+    {% endblock header %}
+</head>
+
+<body>
+        <div class="basehtml">
+            <a href="/">
+                <img src="{% static 'img/HomePage.jpeg' %}" class="salom">
+                <h1 class="homePage">HomePage</h1>
+            </a>
+        </div>
+
+
+        <form action="" method="get">
+            <input type="text" name="search" placeholder="Write keyword to search">
+            <input type="submit" value="search">
+        </form>
+        {% block content %}
+
+        {% endblock content %}
+
+</body>
+</html>
