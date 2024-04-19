@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Delete Page</h2>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Do you want to delete <b>{{ cars.car_name }}</b> from car list<br><br>
+    <input type="submit" value="Yes, delete"><br><br>
+    <button type="button"><a href="{% url 'detail' cars.pk %}">No, come back</a></button>
+</form>
+
+{% endblock content %}

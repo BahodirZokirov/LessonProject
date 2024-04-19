@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Input your personal date to this form</h2>
+    <form action="" method="post" enctype="multipart/form-data"> {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+    </form>
+    <a href="{% url 'password_reset' %}">Forgot Password</a>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h2>Car Detail</h2>
+This car's added by: {{ cars.car_added_by }}<br><br>
+{{ cars.car_name }} <br><br>
+{{ cars.car_make }} <br><br>
+<img src="{% static cars.car_image %}" style="width: 500; height: '500'"> <br><br>
+{{ cars.car_price }} <br><br>
+{{ cars.car_year }} <br><br>
+<a href="{% url 'update' cars.pk %}">UPDATE</a><br><br>
+<a href="{% url 'delete' cars.pk %}">DELETE</a><br><br>
+{% endblock content %}
